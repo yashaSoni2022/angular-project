@@ -1,0 +1,12 @@
+<form class="example-form"  [formGroup]="userform" (ngSubmit)="postUserdata()">
+        <mat-form-field class="example-full-width"  appearance="fill">
+          <mat-label style="color:black" >Enter Name</mat-label>
+          <input matInput placeholder="Enter Name" formControlName="Name">
+        </mat-form-field>
+        <mat-form-field class="example-full-width"  appearance="fill">
+            <mat-label style="color:black">Enter Job title</mat-label>
+            <input matInput placeholder="Enter your title" formControlName="Job" >
+        </mat-form-field>
+        <button type="submit" [disabled]="!userform.valid" mat-button>Submit</button>
+  </form>
+  
